@@ -10,7 +10,7 @@ namespace RpgMVC.Controllers
 {
     public class UsuarioController : Controller 
     {
-        public string uriBase = "xyz/Usuarios";
+        public string uriBase = "http://localhost:5000/Usuarios";
         [HttpGet]
 
     public ActionResult Index()
@@ -19,7 +19,7 @@ namespace RpgMVC.Controllers
     }
 
 
-[HttpPost]
+        [HttpPost]
         public async Task<ActionResult> RegistrarAsync(UsuarioViewModel u)
         {
             try
@@ -35,9 +35,9 @@ namespace RpgMVC.Controllers
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    TempData["Mensagem"] =
-                        string.Format("Usuario {0} Registrado com sucesso! Faça o login para acessar.",u.Username);
-                    return View("AutenticarUsuario");
+                   HttpContext.Session.SetString("SessionTokenUsuario", serialized);
+                   TempData["mensagem"] = string.Format("Bem-vindo {0}!!!",u.Username);
+                   return RedirectToAction("Index", "Personagens");
                 }
                 else
                 {

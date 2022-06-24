@@ -42,3 +42,4 @@ D:\RpgMVC\obj\Debug\net5.0\RpgMVC.Views.pdb
 D:\RpgMVC\obj\Debug\net5.0\RpgMVC.csproj.CopyComplete
 D:\RpgMVC\obj\Debug\net5.0\RpgMVC.genruntimeconfig.cache
 D:\RpgMVC\obj\Debug\net5.0\Razor\Views\Usuarios\CadastrarUsuario.cshtml.g.cs
+D:\RpgMVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartialRpg.cshtml.g.cs
